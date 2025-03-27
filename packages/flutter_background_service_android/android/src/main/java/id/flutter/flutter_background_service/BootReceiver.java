@@ -18,7 +18,6 @@ public class BootReceiver extends BroadcastReceiver {
         if (intent == null || intent.getAction() == null) {
             return;
         }
-
         // Ensure the broadcast comes from the system, not a third-party app
         if (!isSystemBroadcast(context, intent)) {
             Log.w("Security", "Blocked untrusted broadcast: " + intent.getAction());
